@@ -1,0 +1,24 @@
+- API Rest
+- Interações
+    - Atualização de infos no banco relacional
+    - Busca de dados de mensagens no banco para exibir em um relatório
+
+- Atualização:
+    - Recebe ID do disparo e o status da mensagem
+
+- Busca:
+    - Recebe status e retorna os registros que foram marcados com esse status nas últimas 24h 
+
+
+Regras de negócio:
+
+- A atualização só pode ser realizada se a requisição para tal for válida. 
+Para que uma requisição seja válida, o ID recebido deve ser puramente numérico e o 
+status precisa ser válido (deve ser um dos seguintes: "ENVIADO", "RECEBIDO", "ERRO DE ENVIO").
+
+- Caso o registro a ser atualizado não seja encontrado no banco de dados o erro deve ser devidamente
+ tratado e retornado na API.
+
+- A propriedade status estará inicialmente vazia.
+
+
