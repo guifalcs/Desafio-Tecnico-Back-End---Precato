@@ -5,21 +5,21 @@ module.exports = {
     await queryInterface.bulkInsert('smsMessages', [
       {
         phone: '+1234567890',
-        message: 'Hello, this is a test message!',
+        message: 'Olá, isso é uma mensagem de teste!',
         status: '',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         phone: '+0987654321',
-        message: 'Your order has been shipped.',
+        message: 'Olá, isso é uma segunda mensagem de teste!',
         status: '',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         phone: '+1122334455',
-        message: 'Please verify your account.',
+        message: 'Olá, isso é uma terceira mensagem de teste!',
         status: '',
         createdAt: new Date(),
         updatedAt: new Date(),
