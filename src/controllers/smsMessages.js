@@ -1,5 +1,5 @@
 import isNumeric from "../utils/isNumeric.js";
-import { statusPossibilities } from "../utils/status.js";
+import { statusPossibilities } from "../utils/statusPossibilities.js";
 import { smsMessage } from "../models/smsMessage.js";
 import { Op } from "sequelize";
 
