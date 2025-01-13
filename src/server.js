@@ -1,7 +1,10 @@
 import fastify from "fastify";
 import { sequelize } from "./config/sequelize.js";
+import routes from "./router.js";
 
 const app = fastify()
+
+app.register(routes)
 
 app.listen({port: 3000}, async (err, address) => {
     if(err){
