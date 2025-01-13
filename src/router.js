@@ -1,7 +1,7 @@
-import updateSmsMessages from "./routes/updateSmsMessages.js"
+import smsMessages from "./routes/smsMessages.js"
 
 const routes = async (fastify, options) => {
-    fastify.register(updateSmsMessages, {prefix: '/api/updateSmsMessages'})
+    fastify.register(smsMessages, {prefix: '/api/smsMessages'})
 }
 
 export default routes
