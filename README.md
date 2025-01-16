@@ -11,6 +11,5 @@ de regras de negócios e de aprender uma nova tecnologia, no caso, o Fastify com
   - Entre na pasta raíz do projeto, onde está o arquivo docker-compose.yml
   - Rode o arquivo docker-compose.yml com o comando docker-compose up --build
   - Acesse o projeto na sua máquina nas portas expostas pelo docker
-
-
+  - Para parar o projeto, rode docker-compose down
   
