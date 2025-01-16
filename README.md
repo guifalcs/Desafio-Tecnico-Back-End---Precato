@@ -7,7 +7,7 @@ de regras de negócios e de aprender uma nova tecnologia, no caso, o Fastify com
 
 1. Via Docker
 
-  - Clone o repositório para a sua máquina Ex: git clone <link_https_repositorio>
+  - Clone o repositório para a sua máquina com o comando git clone <link_https_repositorio>
   - Entre na pasta raíz do projeto, onde está o arquivo docker-compose.yml
   - Rode o arquivo docker-compose.yml com o comando docker-compose up --build
   - Acesse o projeto na sua máquina nas portas expostas pelo docker
