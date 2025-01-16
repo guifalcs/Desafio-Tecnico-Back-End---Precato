@@ -13,3 +13,11 @@ de regras de negócios e de aprender uma nova tecnologia, no caso, o Fastify com
   - Acesse o projeto na sua máquina nas portas expostas pelo docker
   - Para parar o projeto, rode docker-compose down
   
+2. Via Node
+
+  - Clone o repositório para a sua máquina com o comando git clone <link_https_repositorio>
+  - Instale as dependências com npm install
+  - Configure as suas variáveis de ambiente em um arquivo .env
+  - Instale o MySQL na sua máquina e crie um banco com o nome desafio_precato
+  - Rode npx sequelize-cli db:migrate e npx sequelize-cli db:seed para configurar e povoar o banco
+  - Inicie o servidor com npm run dev
