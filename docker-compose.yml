@@ -1,0 +1,45 @@
+services:
+  backend:
+    image: node:22
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+      - DB_DATABASE=desafio_precato
+      - DB_HOST=db
+      - DB_DIALECT=mysql
+    networks:
+      - app-network
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./package.json:/usr/src/app/package.json
+      - ./package-lock.json:/usr/src/app/package-lock.json
+      - ./.sequelizerc:/usr/src/app/.sequelizerc
+    working_dir: /usr/src/app
+    command: >
+      sh -c "npm install && npm cache clean --force && npx sequelize-cli db:migrate && npx sequelize-cli db:seed && npm run dev"
+    depends_on:
+    - db
+
+  db:
+    image: mysql:8.0
+    container_name: "desafio_precato_db"
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+    environment:
+      - MYSQL_DATABASE=desafio_precato
+      - MYSQL_ROOT_PASSWORD=root
+    
+networks:
+  app-network: 
+    driver: bridge
+
+volumes: 
+  db_data:
+    driver: local

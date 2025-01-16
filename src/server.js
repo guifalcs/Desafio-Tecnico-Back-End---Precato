@@ -6,7 +6,7 @@ const app = fastify()
 
 app.register(routes)
 
-app.listen({port: 3000}, async (err, address) => {
+app.listen({port: 3000, host: '0.0.0.0'}, async (err, address) => {
     if(err){
         console.log(err)
         process.exit(1)
@@ -16,6 +16,7 @@ app.listen({port: 3000}, async (err, address) => {
             await sequelize.authenticate()
             console.log("Banco conectado")
         } catch(error){
+            console.log(error)
             console.log("Erro ao conectar com o banco")
         }
     }
